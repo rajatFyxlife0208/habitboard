@@ -1,0 +1,15 @@
+name: Test Required Reviewer
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Print a message
+        run: echo "Hello! Review approved and now it is deployed."
